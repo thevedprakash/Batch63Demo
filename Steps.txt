@@ -1,0 +1,17 @@
+1. Create and Start Github 
+    a.Create a github Repository.
+    b.Clone it in your machine.
+    c.Follow the instruction written while creating the repository.
+
+2. Create and start Virtual Environment.
+    a.Create a virtual environment. # conda create -n <envName> python=3.x.x
+    b. Activate the environment by executing # conda activate <envName>
+
+3. Start your project development.
+    a. Create the files in a pipeline fashion.
+    b. load -> preprocessing -> model -> train -> evaluate / predict
+    c. check individual modules as well.
+        i. if __name__ == "__main__" :
+            write code to test your module here.
+        ii. python folder_path/file.py
+    d. Add any packages needed to run test or install if not available.
