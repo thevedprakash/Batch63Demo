@@ -1,6 +1,8 @@
 from sklearn.preprocessing import LabelEncoder
 import pandas as pd
+
 from load import load_data, train_path, test_path
+from freatureengineering import time_based_feature_Engineering
 
 def convert_duration_to_minutes(time):
     '''
@@ -179,6 +181,12 @@ def airline_handle_categorical_data(df, target):
 if __name__ == "__main__":
 
     # test your module here.
+    target = 'Price'
     df = load_data(train_path)
     df = sanity_check(df, train=True)
+    handle_missing_value(df)
+    df, encoded_dict = airline_handle_categorical_data(df,target)
+    final_df = time_based_feature_Engineering(df)
     print(df.info())
+    print(encoded_dict)
+    print(final_df.info())
