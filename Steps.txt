@@ -1,7 +1,14 @@
 1. Create and Start Github 
-    a.Create a github Repository.
-    b.Clone it in your machine.
+    a.Create a github Repository. <Repository_link>
+    b.Clone it in your machine. git clone <Repository_link>
     c.Follow the instruction written while creating the repository.
+        echo "# <Repo Name>" >> README.md
+        git init
+        git add README.md
+        git commit -m "first commit"
+        git branch -M master
+        git remote add origin <Repository_link>
+        git push -u origin master
 
 2. Create and start Virtual Environment.
     a.Create a virtual environment. # conda create -n <envName> python=3.x.x
