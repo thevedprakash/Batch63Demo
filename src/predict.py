@@ -66,19 +66,22 @@ def predict_price(df, encoded_path, model_path,error_handle=True):
     result = loaded_model.predict(test_X)
     return result
 
+if __name__ == "__main__":
 
-# test_data_path = "../data/Test.xlsx"
-model_path = '../models/xgboost_demo.pickle'
-encoded_path = '../models/encoded_dict_demo.pickle'
+    # test_data_path = "../data/Test.xlsx"
+    model_path = '../models/xgboost_demo.pickle'
+    encoded_path = '../models/encoded_dict_demo.pickle'
 
-# process of prediction
-df = load_data(test_path)
-df= df.iloc[:,:]
+    # process of prediction
+    df = load_data(test_path)
+    df= df.iloc[:,:]
 
 
-output = predict_price(df, encoded_path, model_path, error_handle=True)
-print(output)
+    output = predict_price(df, encoded_path, model_path, error_handle=True)
+    print(output)
 
-output_path = "../output/results.pickle"
-save_pickle(output_path,output)
-    
+    output_path = "../output/results.pickle"
+    save_pickle(output_path,output)
+        
+
+        # {"Airline":"Jet Airways","Date_of_Journey":"6\/06\/2019","Source":"Delhi","Destination":"Cochin","Route":"DEL \u2192 BOM \u2192 COK","Dep_Time":"17:30","Arrival_Time":"04:25 07 Jun","Duration":"10h 55m","Total_Stops":"1 stop","Additional_Info":"No info"}
